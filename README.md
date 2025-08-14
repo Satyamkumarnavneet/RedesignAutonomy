@@ -479,7 +479,3 @@ This research project evaluates publicly available models for academic and safet
 
 ---
 
-**Generated**: August 14, 2025  
-**Last Updated**: August 14, 2025  
-**Evaluation Run**: run_20250813_215427_complete_nohup  
-**Comparison Analysis**: comparison_run_20250814_091921
