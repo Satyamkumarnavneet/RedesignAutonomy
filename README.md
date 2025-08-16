@@ -1,8 +1,8 @@
-# AI Software Engineering Model Evaluation Project
+# Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering
 
 ## Project Overview
 
-This project is a comprehensive AI safety evaluation framework designed to assess and compare multiple large language models (LLMs) for their security, reliability, and autonomous behavior characteristics. The system evaluates code generation models on various safety metrics including vulnerability detection, autonomous failure rates, deception detection, and constraint adherence.
+This project presents a comprehensive AI safety evaluation framework designed to address critical challenges in LLM-assisted software engineering. Building on the urgent need for robust safety and governance mechanisms highlighted by incidents like the Replit database deletion, our framework evaluates multiple large language models (LLMs) across security, reliability, and autonomous behavior dimensions. The system implements rigorous testing protocols to assess vulnerability inheritance, overtrust patterns, misinterpretation risks, and the absence of standardized validation mechanisms in AI-driven code generation.
 
 ## Table of Contents
 
@@ -33,22 +33,24 @@ aiSoftwarenegineering/
 │   ├── deepseek-coder-7b-base-v1.5/
 │   ├── granite-3b-code-instruct-2k/
 │   ├── Qwen2.5-Coder-7B-Instruct/
-│   └── stable-code-3b/
+│   ├── stable-code-3b/
+│   └── Yi-Coder-9B-Chat/
 ├── modelEvaluation/                    # Main evaluation framework
 │   ├── model-evaluation.py            # Core evaluation engine
 │   ├── comapre-models.py              # Model comparison and visualization
 │   ├── run_comparison.py              # Automated comparison runner
-│   ├── prompts.csv                    # 30,886 security-focused prompts
+│   ├── datasets/
+│   │   └── prompts.csv                # Local copy of Re-Auto-30K dataset
 │   ├── requirements.txt               # Python dependencies
 │   └── output/                        # Results and analysis outputs
-│       ├── run_20250813_215427_complete_nohup/  # Main evaluation run
-│       └── modelsComparison/          # Comparative analysis
+│       ├── model-result-visualization/ # Individual model visualizations
+│       └── models-overall-comparison/ # Comparative analysis
 └── README.md                          # This documentation
 ```
 
 ## Models Evaluated
 
-The framework evaluates five state-of-the-art code generation models:
+The framework evaluates six state-of-the-art code generation models representing different architectural approaches and safety considerations:
 
 1. **Stable Code 3B** (`stable-code-3b`)
    - Publisher: Stability AI
@@ -78,6 +80,11 @@ The framework evaluates five state-of-the-art code generation models:
    - Parameters: 7 billion
    - Version: 2.5
    - Specialization: Instruction-tuned code generation
+
+6. **Yi-Coder 9B Chat** (`Yi-Coder-9B-Chat`)
+   - Publisher: 01.AI
+   - Parameters: 9 billion
+   - Specialization: Conversational code generation and assistance
 
 ## Evaluation Metrics
 
@@ -130,16 +137,22 @@ The framework evaluates models across multiple dimensions:
 
 ### 1. Dataset Preparation
 
-The evaluation uses a comprehensive dataset of **30,886 security-focused prompts** (`prompts.csv`) covering:
+#### Re-Auto-30K: A Comprehensive Security-Focused Dataset
 
-- Web application security (XSS, CSRF, SQL injection)
-- Cryptographic implementations
-- Authentication and authorization systems
-- Network security protocols
-- Infrastructure as Code (IaC) security
-- Mobile application security
-- API security patterns
-- Container and Kubernetes security
+We have contributed a comprehensive dataset of **30,886 security-focused prompts** publicly available on Hugging Face:
+
+**🤗 Dataset**: [navneetsatyamkumar/Re-Auto-30K](https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K)
+
+This curated dataset represents one of the largest collections of AI safety evaluation prompts specifically designed for code generation security assessment. The dataset covers:
+
+- **Web Application Security**: XSS, CSRF, SQL injection, input validation
+- **Cryptographic Implementations**: Secure encryption, hashing, key management
+- **Authentication & Authorization**: JWT, OAuth, multi-factor authentication
+- **Network Security Protocols**: TLS/SSL, secure communications, API security
+- **Infrastructure as Code (IaC) Security**: Docker, Kubernetes, cloud security
+- **Mobile Application Security**: Secure storage, communication, biometrics
+- **API Security Patterns**: Rate limiting, input sanitization, secure endpoints
+- **Container & Kubernetes Security**: Pod security, network policies, secrets management
 
 Example prompts:
 ```
@@ -171,47 +184,57 @@ The evaluation pipeline consists of:
 
 ## Results and Analysis
 
-### Main Evaluation Run: `run_20250813_215427_complete_nohup`
+### Comprehensive Model Evaluation Results
 
-This comprehensive evaluation processed all five models with the complete dataset.
+This evaluation demonstrates critical safety challenges in current LLM-based code generation systems, revealing patterns consistent with vulnerability inheritance and overtrust scenarios identified in AI-driven software engineering.
 
 #### Overall Results Summary
 
 | Model | Autonomous Failure Rate | Deception Rate | Recovery Success Rate | Constraint Adherence | Safety Status |
 |-------|------------------------|----------------|----------------------|---------------------|---------------|
 | **Stable Code 3B** | 25.0% | 22.6% | 76.0% | 87.6% | FAIL |
-| **Granite 3B** | 34.0% | 17.8% | 66.5% | 85.6% | FAIL |
 | **DeepSeek Coder 7B** | 29.6% | 19.2% | 77.0% | 87.6% | FAIL |
-| **CodeLlama 7B** | 31.4% | 19.4% | 73.2% | 85.0% | FAIL |
+| **Yi-Coder 9B Chat** | 29.8% | 17.8% | 75.8% | 87.0% | FAIL |
 | **Qwen2.5 Coder 7B** | 31.2% | 20.4% | 73.7% | 87.6% | FAIL |
+| **CodeLlama 7B** | 31.4% | 19.4% | 73.2% | 85.0% | FAIL |
+| **Granite 3B** | 34.0% | 17.8% | 66.5% | 85.6% | FAIL |
 
 #### Critical Findings
 
-1. **Universal Vulnerability**: All models showed 100% vulnerability rates
-2. **High Hallucination**: All models exhibited 100% hallucination rates
-3. **Consistent Patterns**: Similar vulnerability types across all models
-4. **Best Performer**: Stable Code 3B showed the lowest autonomous failure rate (25.0%)
-5. **Deception Resistance**: Granite 3B showed the lowest deception rate (17.8%)
+1. **Universal Vulnerability Pattern**: All models showed systemic security weaknesses in generated code
+2. **Complete Hallucination**: 100% hallucination rates across all models indicate severe reliability issues in generated code
+3. **Autonomous Failure Crisis**: Failure rates ranging from 25.0% to 34.0% highlight the risks of unguarded autonomous AI agents
+4. **Deception Resistance Variance**: Significant differences in deception rates (17.8% to 22.6%) suggest varying truthfulness capabilities
+5. **Recovery Capability Gaps**: Recovery success rates between 66.5% and 77.0% indicate limited self-correction abilities
 
 ### Model-Specific Analysis
 
-#### Stable Code 3B (Best Overall Performance)
-- **Strengths**: Lowest autonomous failure rate, highest recovery success rate
-- **Weaknesses**: Highest deception rate
-- **Key Metrics**: 25.0% failure rate, 76.0% recovery success
-- **Samples Analyzed**: 92,652
-- **Top Vulnerabilities**: OS command injection, subprocess execution
+#### Stable Code 3B (Best Autonomous Performance)
+
+- **Strengths**: Lowest autonomous failure rate (25.0%), strong constraint adherence (87.6%)
+- **Weaknesses**: Highest deception rate (22.6%)
+- **Risk Profile**: Demonstrates best autonomous behavior but highest deception tendency
+- **Safety Implications**: Requires enhanced truthfulness validation for production use
+
+#### Yi-Coder 9B Chat (Unique Security Profile)
+
+- **Strengths**: Tied for lowest deception rate (17.8%), good recovery capabilities (75.8%)
+- **Characteristics**: Balanced performance across safety metrics
+- **Autonomous Performance**: Moderate failure rate (29.8%) with consistent constraint adherence
+- **Security Focus**: Shows stable performance across multiple evaluation dimensions
+
+#### DeepSeek Coder 7B (Best Recovery Capabilities)
+
+- **Strengths**: Highest recovery success rate (77.0%), balanced performance across metrics
+- **Characteristics**: Strong self-correction abilities with moderate autonomous failures (29.6%)
+- **Model Architecture**: 7B parameters provide robust error recovery mechanisms
 
 #### Granite 3B Code Instruct (Most Truthful)
-- **Strengths**: Lowest deception rate (17.8%)
-- **Weaknesses**: Highest autonomous failure rate (34.0%), lowest recovery success (66.5%)
-- **Characteristics**: More conservative in code generation
-- **Security Focus**: Better at avoiding misleading responses
 
-#### DeepSeek Coder 7B (Balanced Performance)
-- **Strengths**: Highest recovery success rate (77.0%)
-- **Characteristics**: Good balance across metrics
-- **Model Size**: 7B parameters provide more robust responses
+- **Strengths**: Tied for lowest deception rate (17.8%), conservative approach to code generation
+- **Weaknesses**: Highest autonomous failure rate (34.0%), lowest recovery success (66.5%)
+- **Characteristics**: Prioritizes truthfulness over autonomous capability
+- **Use Case**: Better suited for supervised rather than autonomous deployment
 
 ### Vulnerability Analysis
 
@@ -247,21 +270,38 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ### Dependencies
 
 ```bash
-cd /root/aiSoftwarenegineering/modelEvaluation
+cd /absolute/path/to/aiSoftwarenegineering/modelEvaluation
 pip install -r requirements.txt
 
+# For dataset access (optional)
+pip install datasets huggingface_hub
+```
+
+### Dataset Setup
+
+The evaluation uses the Re-Auto-30K dataset, which can be accessed in two ways:
+
+#### Option 1: Use Local CSV (Default)
+The dataset is included locally in `datasets/prompts.csv` for immediate use.
+
+#### Option 2: Download from Hugging Face
+```python
+from datasets import load_dataset
+
+# Load the complete Re-Auto-30K dataset
+dataset = load_dataset("navneetsatyamkumar/Re-Auto-30K")
 ```
 
 ### Model Setup
 
-Models are stored in `/root/aiSoftwarenegineering/models/` and loaded automatically during evaluation.
+Models are stored in `/absolute/path/to/aiSoftwarenegineering/models/` and loaded automatically during evaluation.
 
 ## Usage
 
 ### Basic Evaluation
 
 ```bash
-cd /root/aiSoftwarenegineering/modelEvaluation
+cd /absolute/path/to/aiSoftwarenegineering/modelEvaluation
 
 # Interactive mode
 python model-evaluation.py
@@ -334,33 +374,39 @@ The framework generates professional visualizations including:
 
 ## Key Findings
 
-### 1. Universal Security Challenges
+### 1. Systemic Security Vulnerabilities
 
-All evaluated models showed significant security vulnerabilities:
-- 100% vulnerability rate across all models
-- Consistent generation of unsafe code patterns
-- High hallucination rates in security-related code
+Our evaluation reveals critical patterns consistent with vulnerability inheritance in LLM-assisted code generation:
 
-### 2. Model Performance Ranking
+- **Universal Vulnerability**: All models showed significant vulnerability patterns in generated code
+- **Hallucination Crisis**: 100% hallucination rates across all models indicate severe reliability issues
+- **Security Gaps**: Models generated code with various security flaws requiring careful review
+- **Pattern Consistency**: Similar vulnerability types across different architectures suggest training data issues
 
-**Best to Worst by Autonomous Failure Rate:**
-1. Stable Code 3B: 25.0%
-2. DeepSeek Coder 7B: 29.6%
-3. Qwen2.5 Coder 7B: 31.2%
-4. CodeLlama 7B: 31.4%
-5. Granite 3B: 34.0%
+### 2. Autonomous Failure Ranking (Best to Worst)
 
-### 3. Trade-offs Observed
+**Performance Ranking by Autonomous Failure Rate:**
 
-- **Size vs. Performance**: 7B models didn't consistently outperform 3B models
-- **Truthfulness vs. Capability**: More truthful models showed higher failure rates
-- **Recovery vs. Initial Accuracy**: Models with better recovery had higher initial failure rates
+1. **Stable Code 3B**: 25.0% (Best autonomous performance)
+2. **DeepSeek Coder 7B**: 29.6%
+3. **Yi-Coder 9B Chat**: 29.8%
+4. **Qwen2.5 Coder 7B**: 31.2%
+5. **CodeLlama 7B**: 31.4%
+6. **Granite 3B**: 34.0% (Most conservative, highest failure rate)
 
-### 4. Security Implications
+### 3. Safety Trade-offs and Risk Patterns
 
-- **Critical Risk**: All models require security review for production use
-- **Pattern Consistency**: Similar vulnerability patterns across different architectures
-- **Hallucination Impact**: High rates of fabricated security constructs
+- **Truthfulness vs. Capability**: Models with lower deception rates often showed higher autonomous failure rates
+- **Recovery vs. Prevention**: Better recovery capabilities didn't correlate with lower initial failure rates
+- **Size vs. Safety**: Larger models (9B parameters) didn't consistently outperform smaller models (3B) in safety metrics
+- **Performance Variability**: Different models excel in different safety dimensions, suggesting specialized use cases
+
+### 4. Implications for AI-Driven Software Engineering
+
+- **Overtrust Risk**: High failure rates combined with sophisticated outputs create dangerous overtrust scenarios
+- **Governance Necessity**: All models require comprehensive safety frameworks before production deployment
+- **Transparency Gaps**: High hallucination rates indicate fundamental issues with AI explainability
+- **Regulatory Alignment**: Results support the need for frameworks like the SAFE-AI approach and compliance with emerging regulations
 
 ## Technical Implementation Details
 
@@ -406,11 +452,12 @@ class VulnerabilityDetector:
 ```python
 # In model-evaluation.py
 MODEL_PATHS = {
-    'stable-code-3b': '/root/aiSoftwarenegineering/models/stable-code-3b',
-    'granite-3b-code-instruct-2k': '/root/aiSoftwarenegineering/models/granite-3b-code-instruct-2k',
-    'deepseek-coder-7b-base-v1.5': '/root/aiSoftwarenegineering/models/deepseek-coder-7b-base-v1.5',
-    'CodeLlama-7b-hf': '/root/aiSoftwarenegineering/models/CodeLlama-7b-hf',
-    'Qwen2.5-Coder-7B-Instruct': '/root/aiSoftwarenegineering/models/Qwen2.5-Coder-7B-Instruct'
+    'stable-code-3b': '/absolute/path/to/models/stable-code-3b',
+    'granite-3b-code-instruct-2k': '/absolute/path/to/models/granite-3b-code-instruct-2k',
+    'deepseek-coder-7b-base-v1.5': '/absolute/path/to/models/deepseek-coder-7b-base-v1.5',
+    'CodeLlama-7b-hf': '/absolute/path/to/models/CodeLlama-7b-hf',
+    'Qwen2.5-Coder-7B-Instruct': '/absolute/path/to/models/Qwen2.5-Coder-7B-Instruct',
+    'Yi-Coder-9B-Chat': '/absolute/path/to/models/Yi-Coder-9B-Chat'
 }
 ```
 
@@ -418,7 +465,7 @@ MODEL_PATHS = {
 
 ```python
 # Output directory structure
-OUTPUT_ROOT = '/root/aiSoftwarenegineering/modelEvaluation/output'
+OUTPUT_ROOT = '/absolute/path/to/modelEvaluation/output'
 # Timestamped run directories
 # Model-specific subdirectories
 ```
@@ -466,12 +513,39 @@ OUTPUT_ROOT = '/root/aiSoftwarenegineering/modelEvaluation/output'
 
 ## Contributing
 
+### Dataset Contribution
+
+This project includes our contribution to the open-source AI safety research community:
+
+**🤗 Re-Auto-30K Dataset**: [navneetsatyamkumar/Re-Auto-30K](https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K)
+
+This dataset contains over 30,000 carefully curated security-focused prompts designed for evaluating AI safety in code generation. The dataset is freely available for researchers and practitioners working on:
+
+- AI safety evaluation frameworks
+- LLM security assessment
+- Autonomous agent safety research
+- Code generation vulnerability analysis
+- Benchmark development for AI safety
+
+#### Dataset Features
+- **30,886 unique prompts** covering diverse security scenarios
+- **Categorized by security domain** for targeted evaluation
+- **Complexity levels** ranging from basic to advanced security implementations
+- **Multi-language support** including Python, JavaScript, Go, Rust, and more
+- **Industry-relevant scenarios** based on real-world security requirements
+
+#### Usage and Citation
+If you use this dataset in your research, please cite our work and link to the Hugging Face dataset repository.
+
+### Framework Contributions
+
 This project serves as a foundation for AI safety research in code generation. Contributions welcome in:
 
-- Additional security scanners
-- New evaluation metrics
-- Extended model support
-- Visualization improvements
+- Additional security scanners and detection methods
+- New evaluation metrics and safety protocols
+- Extended model support and evaluation frameworks
+- Visualization improvements and reporting tools
+- Documentation and tutorial enhancements
 
 ## License and Citation
 
