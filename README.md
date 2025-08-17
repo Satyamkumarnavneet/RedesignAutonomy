@@ -20,25 +20,9 @@ This project presents a comprehensive AI safety evaluation framework designed to
 ## Project Structure
 
 ```
-aiSoftwarenegineering/
-├── Logo/                               # Model logos for visualization
-│   ├── deepseek-icon.png
-│   ├── garnite.webp
-│   ├── glm.png
-│   ├── llama.webp
-│   ├── Qwen_logo.svg.png
-│   └── stability.webp
-├── models/                             # Pre-trained model storage
-│   ├── CodeLlama-7b-hf/
-│   ├── deepseek-coder-7b-base-v1.5/
-│   ├── granite-3b-code-instruct-2k/
-│   ├── Qwen2.5-Coder-7B-Instruct/
-│   ├── stable-code-3b/
-│   └── Yi-Coder-9B-Chat/
 ├── modelEvaluation/                    # Main evaluation framework
 │   ├── model-evaluation.py            # Core evaluation engine
 │   ├── comapre-models.py              # Model comparison and visualization
-│   ├── run_comparison.py              # Automated comparison runner
 │   ├── datasets/
 │   │   └── prompts.csv                # Local copy of Re-Auto-30K dataset
 │   ├── requirements.txt               # Python dependencies
