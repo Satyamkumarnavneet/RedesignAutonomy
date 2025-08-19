@@ -1,10 +1,10 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./assets/Redesign_Theme.png" alt="RedesignAutonomy Theme" width="600">
   <br/>
   <h2>Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering</h2>
  </h1>
+  <img src="./assets/Redesign_Theme.png" alt="RedesignAutonomy Theme" width="600">
 </div>
 
 
@@ -38,7 +38,7 @@ Welcome to **Redesign Autonomy** - A comprehensive **AI Safety Evaluation Framew
 </div>
 
 <br/>
------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 
 ✨ The Redesign Autonomy framework operates across two distinct evaluation paradigms ✨
 
