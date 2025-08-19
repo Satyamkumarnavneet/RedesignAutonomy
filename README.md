@@ -38,7 +38,7 @@ Welcome to **Redesign Autonomy** - A comprehensive **AI Safety Evaluation Framew
 </div>
 
 <br/>
---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 ✨ The Redesign Autonomy framework operates across two distinct evaluation paradigms ✨
 
