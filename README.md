@@ -351,7 +351,7 @@ The evaluation pipeline consists of:
 
 <span id='how-to-use'/>
 
-## 🔍 How to use RedesignAutonomy
+## 🔍 How to use Redesign Autonomy
 
 <div align="center">
   <img src="https://img.shields.io/badge/🚀%20Get%20Started-3%20Simple%20Steps-success?style=for-the-badge&color=28A745&labelColor=155724" alt="Get Started">
