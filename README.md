@@ -1,36 +1,213 @@
-# Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering
+<a name="readme-top"></a>
 
-## Project Overview
+<div align="center">
+  <img src="./assets/Redesign_Theme.png" alt="RedesignAutonomy Theme" width="600">
+ </h1>
+</div>
 
-This project presents a comprehensive AI safety evaluation framework designed to address critical challenges in LLM-assisted software engineering. Building on the urgent need for robust safety and governance mechanisms highlighted by incidents like the Replit database deletion, our framework evaluates multiple large language models (LLMs) across security, reliability, and autonomous behavior dimensions. The system implements rigorous testing protocols to assess vulnerability inheritance, overtrust patterns, misinterpretation risks, and the absence of standardized validation mechanisms in AI-driven code generation.
 
-## Table of Contents
+<div align="center">
+  <a href="https://arxiv.org/abs/2508.11824"><img src="https://img.shields.io/badge/Paper%20on%20Arxiv-1a1a2e?logoColor=00d4ff&logo=arxiv&style=for-the-badge" alt="Paper"></a>
+  <a href="https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K"><img src="https://img.shields.io/badge/DATASETS-2a2a3e?logoColor=ff9500&logo=huggingface&style=for-the-badge" alt="Benchmark"></a>
+  <a href="https://github.com/Satyamkumarnavneet/RedesignAutonomy"><img src="https://img.shields.io/badge/GitHub-Repository-0d1117?style=for-the-badge&color=00d4ff&logo=github&logoColor=white" alt="GitHub Repository"></a>
+  <br/>
+  <a href="#documentation"><img src="https://img.shields.io/badge/Documentation-1a1a2e?logo=googledocs&logoColor=ff9500&style=for-the-badge" alt="Check out the documentation"></a>
+  <a href="#quick-start"><img src="https://img.shields.io/badge/Quick%20Start-2a2a3e?logoColor=00d4ff&logo=rocket&style=for-the-badge" alt="Quick Start"></a>
+  <a href="#key-findings"><img src="https://img.shields.io/badge/Key%20Findings-0d1117?logoColor=ff9500&logo=chart&style=for-the-badge" alt="Key Findings"></a>
+  <hr>
+</div>
+<br/>
 
-1. [Project Structure](#project-structure)
-2. [Models Evaluated](#models-evaluated)
-3. [Evaluation Metrics](#evaluation-metrics)
-4. [Methodology](#methodology)
-5. [Results and Analysis](#results-and-analysis)
-6. [Installation and Setup](#installation-and-setup)
-7. [Usage](#usage)
-8. [Output Documentation](#output-documentation)
-9. [Key Findings](#key-findings)
-10. [Future Work](#future-work)
+Welcome to **Redesign Autonomy** - A comprehensive **AI Safety Evaluation Framework** designed to address critical challenges in **LLM-assisted Software Engineering**. This state-of-the-art platform provides researchers and practitioners with:
 
-## Project Structure
+ - 🎯 **Comprehensive Safety Assessment**: Multi-dimensional evaluation across security, reliability, and autonomous behavior
+ - 🔄 **Systematic Testing Protocols**: Rigorous evaluation methodologies for vulnerability inheritance and overtrust patterns
+ - 🧠 **Advanced Safety Metrics**: Novel metrics for measuring AI system reliability in software engineering contexts
+ - 🚀 **Real-world Impact**: Addressing critical failures like the Replit database deletion incident
 
+<span id='how-it-works'/>
+
+## ✨ How Redesign Autonomy works
+
+<div align="center">
+  <img src="./assets/workflow.png" alt="RedesignAutonomy Workflow" width="800">
+  <br/>
+  <em>Redesign Autonomy Framework Workflow: End-to-End AI Safety Evaluation Pipeline</em>
+</div>
+
+<br/>
+--------------------------------------------------------------------------------
+
+✨ The Redesign Autonomy framework operates across two distinct evaluation paradigms ✨
+
+**Autonomous Behavior Assessment**
+<br/> Comprehensive evaluation of AI systems' autonomous decision-making capabilities, measuring failure rates, constraint adherence, and recovery mechanisms under various operational scenarios.
+
+**Security & Reliability Evaluation**
+<br/> Systematic assessment of vulnerability inheritance, hallucination patterns, and deception risks in LLM-generated code, providing critical insights for safe AI deployment.
+
+--------------------------------------------------------------------------------
+
+🌟 **Core Capabilities & Safety Assessment**</br>
+**RedesignAutonomy** delivers a **Comprehensive AI Safety Ecosystem** through systematic evaluation of critical safety dimensions:
+
+🚀 **Primary Safety Functions**
+ - 🔒 **Vulnerability Assessment**: Comprehensive analysis of security flaws in AI-generated code.
+ - 🧩 **Hallucination Detection**: Systematic identification of fabricated APIs, methods, and parameters.
+ - 🛡️ **Autonomous Failure Analysis**: Rigorous testing of AI system behavior under autonomous operation.
+ - 🎭 **Deception Pattern Recognition**: Advanced detection of misleading responses and explanations.
+ - 🔄 **Recovery Mechanism Evaluation**: Assessment of AI systems' self-correction capabilities.
+ - 📊 **Constraint Adherence Testing**: Verification of compliance with specified requirements and standards.
+
+<div align="center">
+  <!-- <img src="./assets/AI-Researchernew-intro.pdf" alt="Logo" width="100%"> -->
+  <figure>
+    <img src="./modelEvaluation/output/models-overall-comparison/grouped_metrics_bar_chart.png" alt="Logo" style="max-width: 100%; height: auto;">
+    <br>
+    <figcaption><em>Comprehensive Safety Evaluation Metrics Comparison Across Multiple LLMs.</em></figcaption>
+  </figure>
+</div>
+
+<span id='news'/>
+
+## 🔥 News
+
+<div class="scrollable">
+    <ul>
+      <li><strong>[2025, August 19]</strong>: &nbsp;🎉🎉 <b>Major Release! Redesign Autonomy Safety Framework!</b> 🚀
+        <br>We are excited to announce a significant milestone for AI Safety in Software Engineering:
+        <ul>
+          <li>📄 <b><a href="https://arxiv.org/abs/2508.11824">Academic Paper Release</a></b>: Comprehensive analysis of AI safety challenges in software engineering</li>
+          <li>📊 <b><a href="https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K">Re-Auto-30K Dataset</a></b>: Largest collection of security-focused prompts for AI safety evaluation</li>
+          <li>🖥️ <b>Comprehensive Evaluation Suite</b>: Advanced framework for assessing LLM safety in autonomous software engineering</li>
+        </ul>
+        <b>🤝 Join Us!</b> We welcome researchers, developers, and AI safety enthusiasts to contribute to safer AI systems. Whether it's code contributions, bug reports, dataset improvements, or safety research, every contribution advances the field!
+        <br>💡 <i>Let's build safer AI systems for software engineering together!</i>
+      </li>
+      <li><strong>[2024, August 15]</strong>: &nbsp;🎉🎉We've launched <b>Redesign Autonomy!</b>, The release includes the complete safety evaluation framework, Re-Auto-30K dataset, comprehensive model analysis, and much more. Stay tuned for continuous safety improvements! 🚀</li>
+    </ul>
+</div>
+
+<span id='table-of-contents'/>
+
+## 📑 Table of Contents
+
+
+* <a href='#news'>🔥 News</a>
+* <a href='#quick-start'>⚡ Quick Start</a>
+  * <a href='#installation'>Installation</a>
+  * <a href='#dataset-setup'>Dataset Setup</a>
+* <a href='#models-evaluated'>🤖 Models Evaluated</a>
+* <a href='#evaluation-metrics'>📊 Evaluation Metrics</a>
+* <a href='#methodology'>🔬 Methodology</a>
+* <a href='#how-it-works'>✨ How RedesignAutonomy works</a>
+* <a href='#how-to-use'>🔍 How to use RedesignAutonomy</a>
+* <a href='#results-and-analysis'>📈 Results and Analysis</a>
+* <a href='#key-findings'>🎯 Key Findings</a>
+* <a href='#documentation'>📖 Documentation</a>
+* <a href='#cite'>🌟 Cite</a>
+
+
+<span id='quick-start'/>
+
+## ⚡ Quick Start
+
+<div align="center">
+  <img src="https://img.shields.io/badge/🚀%20Quick%20Start-Ready%20in%205%20Minutes-success?style=for-the-badge&color=28A745&labelColor=155724" alt="Quick Setup">
+  <img src="https://img.shields.io/badge/🐍%20Python%20Required-3.10+-important?style=for-the-badge&color=FF6B6B&labelColor=C92A2A" alt="Python Required">
+  <img src="https://img.shields.io/badge/🎯%20Easy%20Setup-pip%20install-blue?style=for-the-badge&color=007BFF&labelColor=0056B3" alt="Easy Install">
+</div>
+
+<br/>
+
+<span id='installation'/>
+
+### Installation
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Step%201-Clone%20Repository-informational?style=flat-square&color=17A2B8" alt="Step 1">
+  <img src="https://img.shields.io/badge/Step%202-Setup%20Environment-informational?style=flat-square&color=6C757D" alt="Step 2">
+  <img src="https://img.shields.io/badge/Step%203-Install%20Dependencies-informational?style=flat-square&color=28A745" alt="Step 3">
+  <img src="https://img.shields.io/badge/Step%204-Run%20Evaluation-informational?style=flat-square&color=FFC107" alt="Step 4">
+</div>
+
+#### Environment Setup
+
+1. **Clone the Repository**
+
+
+```bash
+# Clone the RedesignAutonomy repository
+git clone https://github.com/navneetsatyamkumar/RedesignAutonomy.git
+cd RedesignAutonomy
+
+# Navigate to the evaluation framework
+cd modelEvaluation
 ```
-├── modelEvaluation/                    # Main evaluation framework
-│   ├── model-evaluation.py            # Core evaluation engine
-│   ├── comapre-models.py              # Model comparison and visualization
-│   ├── datasets/
-│   │   └── prompts.csv                # Local copy of Re-Auto-30K dataset
-│   ├── requirements.txt               # Python dependencies
-│   └── output/                        # Results and analysis outputs
-│       ├── model-result-visualization/ # Individual model visualizations
-│       └── models-overall-comparison/ # Comparative analysis
-└── README.md                          # This documentation
+
+2. **Python Environment Setup**
+
+
+> We recommend using Python 3.10+ for optimal compatibility
+
+```bash
+# Create virtual environment
+python -m venv reauto-env
+source reauto-env/bin/activate  # On Windows: reauto-env\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
+
+#### Hardware Requirements
+
+- **GPU Support**: NVIDIA GPUs with CUDA support (recommended for model evaluation)
+- **Memory**: Minimum 16GB RAM, 32GB+ recommended for large model evaluation
+- **Storage**: At least 50GB free space for models and evaluation results
+
+<span id='dataset-setup'/>
+
+### Dataset Setup
+
+<div align="center">
+  <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Re--Auto--30K-yellow?style=for-the-badge&logo=huggingface&color=FF9A00&labelColor=FF6600" alt="Hugging Face Dataset">
+  <img src="https://img.shields.io/badge/📊%20Dataset%20Size-30,886%20Prompts-blue?style=for-the-badge&color=1E88E5&labelColor=0D47A1" alt="Dataset Size">
+  <img src="https://img.shields.io/badge/🔒%20Security%20Focused-100%25-green?style=for-the-badge&color=4CAF50&labelColor=2E7D32" alt="Security Focused">
+</div>
+
+<br/>
+
+#### Re-Auto-30K: Security-Focused Evaluation Dataset
+
+We provide the **Re-Auto-30K** dataset - a comprehensive collection of **30,886 security-focused prompts** for AI safety evaluation:
+
+<div align="center">
+  <a href="https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K">
+    <img src="https://img.shields.io/badge/🤗%20Download%20Dataset-Hugging%20Face-orange?style=for-the-badge&logo=huggingface&logoColor=white" alt="Download Dataset">
+  </a>
+</div>
+
+#### Local Dataset Access
+
+
+The dataset is already included in `datasets/prompts.csv` for immediate use:
+
+```bash
+# Verify dataset availability
+ls modelEvaluation/datasets/prompts.csv
+```
+
+#### Download Latest Dataset (Optional)
+
+```python
+from datasets import load_dataset
+
+# Load the complete Re-Auto-30K dataset
+dataset = load_dataset("navneetsatyamkumar/Re-Auto-30K")
+dataset.save_to_disk("./datasets/re_auto_30k")
+```
+
+<span id='models-evaluated'/>
 
 ## Models Evaluated
 
@@ -69,6 +246,8 @@ The framework evaluates six state-of-the-art code generation models representing
    - Publisher: 01.AI
    - Parameters: 9 billion
    - Specialization: Conversational code generation and assistance
+
+<span id='evaluation-metrics'/>
 
 ## Evaluation Metrics
 
@@ -116,6 +295,8 @@ The framework evaluates models across multiple dimensions:
 - **CWE Diversity**: Number of unique vulnerability types
 - **Average Detection Time**: Time to identify security issues
 - **Overall Safety Status**: PASS/FAIL classification
+
+<span id='methodology'/>
 
 ## Methodology
 
@@ -165,6 +346,125 @@ The evaluation pipeline consists of:
 - **Memory Management**: Automatic GPU cleanup between models
 - **Storage**: Structured output with timestamped directories
 - **Logging**: Comprehensive logging for nohup execution
+
+<span id='how-to-use'/>
+
+## 🔍 How to use RedesignAutonomy
+
+<div align="center">
+  <img src="https://img.shields.io/badge/🚀%20Get%20Started-3%20Simple%20Steps-success?style=for-the-badge&color=28A745&labelColor=155724" alt="Get Started">
+  <img src="https://img.shields.io/badge/⚡%20Quick%20Run-5%20Minutes-info?style=for-the-badge&color=17A2B8&labelColor=117A8B" alt="Quick Run">
+  <img src="https://img.shields.io/badge/🎯%20Easy%20Config-No%20Setup%20Required-warning?style=for-the-badge&color=FFC107&labelColor=E0A800" alt="Easy Config">
+</div>
+
+<br/>
+
+### 1. Basic Safety Evaluation
+
+<div align="left">
+  <img src="https://img.shields.io/badge/Step%201-Basic%20Evaluation-blue?style=flat-square&logo=play&logoColor=white" alt="Step 1">
+  <img src="https://img.shields.io/badge/🐍%20Python-model--evaluation.py-green?style=flat&logo=python&logoColor=white" alt="Python Script">
+  <img src="https://img.shields.io/badge/⚡%20Quick%20Mode-Interactive-yellow?style=flat&color=FFC107" alt="Interactive Mode">
+</div>
+
+Run a comprehensive safety evaluation of AI models using the default configuration:
+
+```bash
+cd modelEvaluation
+
+# Interactive mode - recommended for first-time users
+python model-evaluation.py
+
+# Background mode - recommended for full evaluation
+nohup python model-evaluation.py > evaluation.log 2>&1 &
+```
+
+### 2. Model Comparison and Analysis
+
+Generate comparative analysis and visualizations across all evaluated models:
+
+```bash
+# Run automated comparison analysis
+python compare-models.py
+
+# Monitor evaluation progress
+tail -f evaluation.log
+```
+
+### 3. Custom Evaluation Configuration
+
+Customize the evaluation for specific models or metrics:
+
+```python
+# Example: Custom evaluation configuration
+from model_evaluation import SafetyEvaluator
+
+evaluator = SafetyEvaluator(
+    models=["stable-code-3b", "deepseek-coder-7b"],
+    metrics=["vulnerability_rate", "autonomous_failure_rate"],
+    dataset_size=1000,  # Subset for faster evaluation
+    output_dir="custom_evaluation"
+)
+
+results = evaluator.run_evaluation()
+```
+
+### 4. Dataset Integration
+
+Use your own security-focused prompts for evaluation:
+
+```python
+# Load custom dataset
+import pandas as pd
+
+custom_prompts = pd.read_csv("your_security_prompts.csv")
+evaluator = SafetyEvaluator(dataset=custom_prompts)
+results = evaluator.run_evaluation()
+```
+
+### 5. Monitoring and Output Analysis
+
+#### Real-time Monitoring
+
+```bash
+# Monitor nohup execution
+tail -f evaluation.log
+
+# Check GPU utilization
+watch -n 1 nvidia-smi
+
+# Monitor specific model progress
+tail -f output/run_*/model_name/combined_summary.md
+```
+
+### 6. Advanced Usage
+
+#### Distributed Evaluation
+
+For large-scale evaluations across multiple GPUs:
+
+```bash
+# Configure distributed settings
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+python model-evaluation.py --distributed --num_gpus 4
+```
+
+#### Custom Safety Metrics
+
+Extend the framework with your own safety metrics:
+
+```python
+from safety_metrics import BaseMetric
+
+class CustomSecurityMetric(BaseMetric):
+    def evaluate(self, generated_code, prompt):
+        # Your custom security analysis logic
+        return safety_score
+
+evaluator.add_custom_metric(CustomSecurityMetric())
+```
+
+<span id='results-and-analysis'/>
 
 ## Results and Analysis
 
@@ -356,6 +656,8 @@ The framework generates professional visualizations including:
 - **Line Charts**: Performance trends and patterns
 - **Scatter Plots**: Correlation analysis between metrics
 
+<span id='key-findings'/>
+
 ## Key Findings
 
 ### 1. Systemic Security Vulnerabilities
@@ -389,151 +691,56 @@ Our evaluation reveals critical patterns consistent with vulnerability inheritan
 
 - **Overtrust Risk**: High failure rates combined with sophisticated outputs create dangerous overtrust scenarios
 - **Governance Necessity**: All models require comprehensive safety frameworks before production deployment
-- **Transparency Gaps**: High hallucination rates indicate fundamental issues with AI explainability
-- **Regulatory Alignment**: Results support the need for frameworks like the SAFE-AI approach and compliance with emerging regulations
+- **Specialized Deployment**: Different models suit different use cases based on their safety profiles
+- **Continuous Monitoring**: Real-time safety assessment is essential for AI-driven software development
 
-## Technical Implementation Details
+<span id='documentation'/>
 
-### Multi-GPU Support
+## 📖 Documentation
 
-The framework supports distributed evaluation across multiple GPUs:
+Comprehensive documentation and resources are available to help you get started with RedesignAutonomy:
 
-```python
-# GPU assignment strategy
-NUM_GPUS = 10  # RTX 3080 Ti configuration
-# Sequential model loading with memory cleanup
-# Ray-based distributed processing
-```
+### 📚 Core Documentation
 
-### Memory Management
+- **[Getting Started Guide](./DOCUMENTATION.md)** - Complete setup and usage instructions
+- **[Dataset Documentation](https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K)** - Complete Re-Auto-30K dataset documentation
 
-Robust memory management prevents OOM errors:
+### 🔬 Research Resources
 
-```python
-# Automatic cleanup between models
-def cleanup_model_from_gpu(model_name: str):
-    # GPU memory cleanup
-    # Model unloading
-    # Ray actor cleanup
-```
+- **[Academic Paper](https://arxiv.org/abs/2508.11824)** - "Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering"
+- **[Evaluation Results](./modelEvaluation/output/)** - Complete evaluation results and analysis
+- **[Methodology Documentation](./DOCUMENTATION.md)** - Detailed evaluation methodology and statistical analysis
 
-### Vulnerability Detection
+<span id='cite'/>
 
-Multi-layered security analysis:
+## 🌟 Cite
 
-```python
-class VulnerabilityDetector:
-    # Bandit static analysis
-    # Custom pattern matching
-    # CWE classification
-    # Severity scoring
-```
+If you use RedesignAutonomy in your research or find our work helpful, please cite our paper:
 
-## Configuration
-
-### Model Paths Configuration
-
-```python
-# In model-evaluation.py
-MODEL_PATHS = {
-    'stable-code-3b': '/absolute/path/to/models/stable-code-3b',
-    'granite-3b-code-instruct-2k': '/absolute/path/to/models/granite-3b-code-instruct-2k',
-    'deepseek-coder-7b-base-v1.5': '/absolute/path/to/models/deepseek-coder-7b-base-v1.5',
-    'CodeLlama-7b-hf': '/absolute/path/to/models/CodeLlama-7b-hf',
-    'Qwen2.5-Coder-7B-Instruct': '/absolute/path/to/models/Qwen2.5-Coder-7B-Instruct',
-    'Yi-Coder-9B-Chat': '/absolute/path/to/models/Yi-Coder-9B-Chat'
+```bibtex
+@misc{navneet2025rethinkingautonomypreventingfailures,
+      title={Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering}, 
+      author={Satyam Kumar Navneet and Joydeep Chandra},
+      year={2025},
+      eprint={2508.11824},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2508.11824}, 
 }
 ```
 
-### Output Configuration
+### Related Datasets
 
-```python
-# Output directory structure
-OUTPUT_ROOT = '/absolute/path/to/modelEvaluation/output'
-# Timestamped run directories
-# Model-specific subdirectories
+If you use our Re-Auto-30K dataset, please also cite:
+
+```bibtex
+@dataset{kumar2024reauto30k,
+  title={Re-Auto-30K: A Comprehensive Security-Focused Dataset for AI Safety Evaluation},
+  author={Kumar, Navneet Satyam},
+  year={2024},
+  publisher={Hugging Face},
+  url={https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K}
+}
 ```
 
-## Future Work
-
-### Planned Improvements
-
-1. **Enhanced Security Analysis**
-   - Integration with additional security scanners
-   - Dynamic analysis capabilities
-   - Runtime vulnerability detection
-
-2. **Extended Model Support**
-   - Larger models (13B, 34B parameters)
-   - Domain-specific models
-   - Fine-tuned security models
-
-3. **Advanced Metrics**
-   - Code quality metrics
-   - Performance benchmarks
-   - Maintainability scores
-
-4. **Real-world Testing**
-   - Integration with CI/CD pipelines
-   - Production code analysis
-   - Human expert validation
-
-### Research Directions
-
-1. **Vulnerability Mitigation**
-   - Post-processing security filters
-   - Training data improvements
-   - Reinforcement learning from security feedback
-
-2. **Autonomous Safety**
-   - Better constraint enforcement
-   - Improved self-correction mechanisms
-   - Enhanced failure detection
-
-3. **Benchmark Development**
-   - Standardized security evaluation protocols
-   - Industry-standard metrics
-   - Comparative evaluation frameworks
-
-## Contributing
-
-### Dataset Contribution
-
-This project includes our contribution to the open-source AI safety research community:
-
-**🤗 Re-Auto-30K Dataset**: [navneetsatyamkumar/Re-Auto-30K](https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K)
-
-This dataset contains over 30,000 carefully curated security-focused prompts designed for evaluating AI safety in code generation. The dataset is freely available for researchers and practitioners working on:
-
-- AI safety evaluation frameworks
-- LLM security assessment
-- Autonomous agent safety research
-- Code generation vulnerability analysis
-- Benchmark development for AI safety
-
-#### Dataset Features
-- **30,886 unique prompts** covering diverse security scenarios
-- **Categorized by security domain** for targeted evaluation
-- **Complexity levels** ranging from basic to advanced security implementations
-- **Multi-language support** including Python, JavaScript, Go, Rust, and more
-- **Industry-relevant scenarios** based on real-world security requirements
-
-#### Usage and Citation
-If you use this dataset in your research, please cite our work and link to the Hugging Face dataset repository.
-
-### Framework Contributions
-
-This project serves as a foundation for AI safety research in code generation. Contributions welcome in:
-
-- Additional security scanners and detection methods
-- New evaluation metrics and safety protocols
-- Extended model support and evaluation frameworks
-- Visualization improvements and reporting tools
-- Documentation and tutorial enhancements
-
-## License and Citation
-
-This research project evaluates publicly available models for academic and safety research purposes. Individual models are subject to their respective licenses.
-
 ---
-
