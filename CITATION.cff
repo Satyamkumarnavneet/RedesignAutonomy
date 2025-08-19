@@ -1,0 +1,9 @@
+@misc{navneet2025rethinkingautonomypreventingfailures,
+      title={Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering}, 
+      author={Satyam Kumar Navneet and Joydeep Chandra},
+      year={2025},
+      eprint={2508.11824},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2508.11824}, 
+}
