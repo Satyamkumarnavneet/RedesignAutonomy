@@ -730,11 +730,12 @@ If you use RedesignAutonomy in your research or find our work helpful, please ci
 If you use our Re-Auto-30K dataset, please also cite:
 
 ```bibtex
-@dataset{kumar2024reauto30k,
-  title={Re-Auto-30K: A Comprehensive Security-Focused Dataset for AI Safety Evaluation},
-  author={Kumar, Navneet Satyam},
-  year={2024},
+@dataset{re_auto_30k_2025,
+  title={Re-Auto-30K: A Comprehensive AI Safety Evaluation Dataset for Code Generation},
+  author={Navneet, Satyam Kumar and Contributors},
+  year={2025},
   publisher={Hugging Face},
-  url={https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K}
+  url={https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K},
+  note={A curated dataset of 30,886 security-focused prompts for evaluating AI safety in code generation}
 }
 ```
