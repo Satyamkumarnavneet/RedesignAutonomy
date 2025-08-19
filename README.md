@@ -2,6 +2,8 @@
 
 <div align="center">
   <img src="./assets/Redesign_Theme.png" alt="RedesignAutonomy Theme" width="600">
+  <br/>
+  <h2>Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering</h2>
  </h1>
 </div>
 
@@ -360,12 +362,6 @@ The evaluation pipeline consists of:
 <br/>
 
 ### 1. Basic Safety Evaluation
-
-<div align="left">
-  <img src="https://img.shields.io/badge/Step%201-Basic%20Evaluation-blue?style=flat-square&logo=play&logoColor=white" alt="Step 1">
-  <img src="https://img.shields.io/badge/🐍%20Python-model--evaluation.py-green?style=flat&logo=python&logoColor=white" alt="Python Script">
-  <img src="https://img.shields.io/badge/⚡%20Quick%20Mode-Interactive-yellow?style=flat&color=FFC107" alt="Interactive Mode">
-</div>
 
 Run a comprehensive safety evaluation of AI models using the default configuration:
 
@@ -742,5 +738,3 @@ If you use our Re-Auto-30K dataset, please also cite:
   url={https://huggingface.co/datasets/navneetsatyamkumar/Re-Auto-30K}
 }
 ```
-
----
